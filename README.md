@@ -39,10 +39,10 @@ This README will be updated as the development begins in the upcoming days.
 
 ## Team Member 
 
-- Anusha Shrestha-PUR079BEI008
-- Ditish Acharya-PUR079BEI017
-- Suwarna Pyakurel-PUR079BEI043
-- Yubshan Shrestha-PUR079BEI048
+- Anusha Shrestha - PUR079BEI008
+- Ditish Acharya - PUR079BEI017
+- Suwarna Pyakurel - PUR079BEI043
+- Yubshan Shrestha - PUR079BEI048
 
 ---
 
