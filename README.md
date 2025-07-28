@@ -15,11 +15,11 @@ This README will be updated as the development begins in the upcoming days.
 
 ## Planned Objective
 
--Study how pneumonia can be detected from chest x-ray images.
--Learn and implement deep learning models (CNNs).
--Train and evaluate the model using real-world hospital data.
--Explore model explainability.
--Present the findings as a research-style academic project.
+- Study how pneumonia can be detected from chest x-ray images.
+- Learn and implement deep learning models (CNNs).
+- Train and evaluate the model using real-world hospital data.
+- Explore model explainability.
+- Present the findings as a research-style academic project.
 
 
 ---
