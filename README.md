@@ -18,7 +18,7 @@ This README will be updated as the development begins in the upcoming days.
 - Study how pneumonia can be detected from chest x-ray images.
 - Learn and implement deep learning models (CNNs).
 - Train and evaluate the model using real-world hospital data.
-- Explore model explainability.
+- Explore model expandability.
 - Present the findings as a research-style academic project.
 
 
@@ -41,7 +41,7 @@ This README will be updated as the development begins in the upcoming days.
 
 - Anusha Shrestha-PUR079BEI008
 - Ditish Acharya-PUR079BEI017
-- Suwarna Pyakhurel-PUR079BEI043
+- Suwarna Pyakurel-PUR079BEI043
 - Yubshan Shrestha-PUR079BEI048
 
 ---
@@ -52,7 +52,7 @@ This README will be updated as the development begins in the upcoming days.
 - Learn CNNs and ML fundamentals
 - Choose tech stack
 - Collect data
-- start data preprocessing
+- Start data preprocessing
 - Train Model
 
 ---
