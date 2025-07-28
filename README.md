@@ -31,13 +31,13 @@ This README will be updated as the development begins in the upcoming days.
 
 ---
 
-## Tools and Tech Stack (To be decided)
+## Tools and Tech Stack (Yet to be decided)
 
 - After completing the second objective and holding a team discussion, we will finalize the tech stack suitable for this project.
 
 ---
 
-## Team Member 
+## Team Members 
 
 - Anusha Shrestha - PUR079BEI008
 - Ditish Acharya - PUR079BEI017
