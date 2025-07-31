@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{setspace}
+\setstretch{1.2}
+
+\title{AI-Based Pneumonia Detection from Chest X-rays using Deep Learning}
+\author{Submitted to: EXCESS Review Committee\\ \vspace{0.2cm} July 30, 2025}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This proposal outlines a research project to develop an AI-powered system for detecting pneumonia from chest X-ray (CXR) images using deep learning. The system aims to assist healthcare professionals by automatically classifying X-rays as “Normal” or “Pneumonia” using Convolutional Neural Networks (CNNs) and transfer learning. The model will be trained on publicly available datasets and supplemented by de-identified local X-rays from Nepal, improving contextual accuracy. This solution is optimized for real-world deployment via web or mobile platforms and supports future extension to other X-ray-based diagnoses. The research will also explore explainability (Grad-CAM), clinical relevance, and Nepal-specific application for better public health outcomes.
+
+\section*{1. Abbreviations}
+\begin{itemize}[leftmargin=1.5cm]
+  \item AI – Artificial Intelligence
+  \item CNN – Convolutional Neural Network
+  \item CXR – Chest X-ray
+  \item GPU – Graphics Processing Unit
+  \item AUC – Area Under Curve
+  \item Grad-CAM – Gradient-weighted Class Activation Mapping
+  \item TFLite – TensorFlow Lite
+\end{itemize}
+
+\section*{2. Problem Statement}
+Pneumonia remains a leading cause of death in Nepal, particularly among children and elderly people in rural areas. The country has a doctor-to-population ratio of 1:1724, but in remote districts, the ratio rises drastically to nearly one doctor for every 150,000 people. This maldistribution of doctors means that large populations lack immediate access to accurate medical diagnosis.
+
+Although chest X-rays (CXRs) are relatively available at primary and secondary health facilities, radiological interpretation is limited to urban centers. The average time a doctor spends per patient in busy government hospitals is only 10–15 minutes, making timely and accurate pneumonia diagnosis difficult. Moreover, most existing AI models are trained on international datasets, leading to biased predictions when applied in Nepali healthcare settings due to differences in imaging equipment, patient demographics, and disease prevalence.
+
+Therefore, we propose to develop a CNN-based pneumonia detection model that is trained and fine-tuned using publicly available CXR datasets along with locally sourced chest X-rays from Nepal. This Nepal-specific training will help improve the prediction accuracy and clinical reliability of the system for our health context.
+
+\section*{3. Objectives}
+\begin{itemize}
+  \item Train a deep CNN model to classify chest X-rays as Normal or Pneumonia.
+  \item Fine-tune existing architectures (e.g., ResNet50, DenseNet121) for this task.
+  \item Use Grad-CAM to highlight decision areas on the X-ray for explainability.
+  \item Build a web/mobile interface to make the system usable in remote clinics.
+  \item Evaluate model performance using metrics such as precision, recall, and AUC.
+  \item Incorporate small-scale data from Nepal (if available) for contextual validation.
+\end{itemize}
+
+\section*{4. Literature Review}
+Several studies have demonstrated the feasibility of pneumonia detection using deep learning and chest X-ray images. Paul Mooney’s Chest X-ray dataset on Kaggle has become a benchmark in this domain. Transfer learning using architectures like VGG16, ResNet50, and DenseNet121 has achieved over 90\% accuracy on test sets. Grad-CAM is widely used for visual explanations to make these models interpretable by clinicians.
+
+However, most existing research is limited to benchmark data and ignores the realities of low-resource health environments. There is minimal focus on real-world deployment, local data bias, or usability in countries like Nepal. This project aims to bridge that gap by integrating model design with deployment strategy and local relevance.
+
+\subsection*{Key References}
+\begin{itemize}
+  \item Rajpurkar, P. et al. (2017). “CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning.”
+  \item Mooney, P. (2018). “Chest X-Ray Images (Pneumonia).” Kaggle Dataset.
+  \item Zech, J. R. et al. (2018). “Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: A cross-sectional study.” PLoS Medicine.
+\end{itemize}
+
+\section*{5. Proposed Methodology}
+\begin{enumerate}
+  \item \textbf{Dataset:} Use the Kaggle CXR Pneumonia dataset; optionally augment with local scans.
+  \item \textbf{Preprocessing:} Resize images to 224x224, normalize pixel intensity, and augment (flip, zoom, rotate).
+  \item \textbf{Modeling:} Train CNN-based models using TensorFlow/Keras. Compare custom CNN vs pretrained ResNet50/DenseNet121 using transfer learning.
+  \item \textbf{Evaluation:} Track precision, recall, F1-score, AUC, confusion matrix.
+  \item \textbf{Explainability:} Use Grad-CAM to visualize prediction heatmaps.
+  \item \textbf{Deployment:} Build an app using Streamlit or Flask; optimize with TensorFlow Lite for mobile devices.
+\end{enumerate}
+
+\section*{6. Expected Outcomes}
+\begin{itemize}
+  \item An accurate CNN model capable of detecting pneumonia from chest X-rays.
+  \item An interpretable tool using Grad-CAM to assist radiologists.
+  \item A functioning prototype deployed as a web/mobile tool.
+  \item A regionally fine-tuned pneumonia detection model using Nepal-based X-ray images, resulting in higher contextual accuracy compared to globally trained models.
+  \item A scalable framework that can be adapted to classify other medical conditions such as tuberculosis, pleural effusion, or COVID-19 — all of which can be analyzed via X-ray imaging.
+  \item Research paper submission detailing methodology and performance.
+\end{itemize}
+
+\section*{7. Feasibility}
+The project is achievable within the 8-week research cycle using publicly available datasets and accessible platforms like Google Colab, Kaggle, and Streamlit. Local data can be obtained from clinical partners after ethical clearance. The deployment will be lightweight enough to work on laptops and smartphones via TensorFlow Lite or web-based inference.
+
+Additionally, the proposed architecture is modular — allowing us to later expand this system to detect other thoracic conditions such as tuberculosis, lung cancer, and pleural effusion using annotated X-ray datasets. This makes the platform not only viable but also scalable within the broader health system of Nepal.
+
+\section*{8. Publication Potential}
+We aim to submit this work to:
+\begin{itemize}
+  \item IEEE International Conference on Healthcare Informatics (ICHI)
+  \item Elsevier AI in Medicine Journal
+  \item NepJol – Nepal Journals Online
+  \item Springer Smart Health Workshop Series
+\end{itemize}
+
+\section*{9. Proposed By}
+\begin{itemize}
+  
+  \item Anusha Shrestha — PUR079BEI008
+  \item Ditish Acharya — PUR079BEI017
+  \item Suwarna Pyakurel — PUR079BEI043
+  \item Yubshan Shrestha — PUR079BEI048
+\end{itemize}
+
+\noindent Faculty: Electronics, Communication and Information Engineering
+
+\section*{10. Unique Contribution}
+This project is designed with Nepal’s health infrastructure in mind. By training and validating our model on Nepal-specific X-ray data, we ensure the system is not only accurate but clinically useful for our context. This stands in contrast to many global solutions which fail to account for regional differences in disease expression, imaging formats, or diagnostic protocols.
+
+Furthermore, the project is structured for real-world usability, allowing future expansion to other chest-related conditions using the same platform — ultimately supporting doctors across Nepal’s underserved regions.
+
+
+\section*{11. Reviewer Notes}
+\vspace{2cm} % leave space for notes
+
+\end{document}
+
